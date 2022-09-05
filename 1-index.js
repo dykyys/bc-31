@@ -1,4 +1,4 @@
-// 'use strict';
+'use strict';
 
 /*
  * Так як ми працюємо з вебом, рано чи пізно потрібно додавати собі на сторінку скрипти. І якщо ваш проект - це щось трохи більше, ніж маленька сторінка, швидше за все, ви захочете винести той скрипт у окремий файлик. Ну і звісно після того його собі підключити. Думаю, код схожий на <script src="index.js"> буде вам досить знайомий. Але куди правильно помістити цей код? В head? В кінець body? Може варто додати ще якийсь атрибут для способу завантаження скрипта?
@@ -11,9 +11,6 @@
 /*
 Не можемо звертатися до змінної без її оголошення
 */
-a = 15;
-
-console.log(a);
 
 /*
  * Базові примітивні типи: number, string, boolean, null и undefined.
@@ -33,19 +30,17 @@ console.log(a);
  * Змінні: оголошення з let та const, іменування.
  */
 
-// const userLastName = 'mango';
 // const age = 21;
-// const isAdult = true;
 
-// console.log(typeof null);
+// console.log(typeof age);
 
 /*
  * Отримання даних: prompt и confirm.
  */
-// const userAge = prompt('Скільки тобі років?');
 
-// console.log(userAge);
+// const userAge = prompt('Скільки вам років?');
+
+// alert(userAge);
 
 // const isAdult = confirm('Вам є 18 років?');
-
 // console.log(isAdult);

@@ -9,11 +9,12 @@
  * При порівнянні різних типів, операнди приводяться до числа.
  */
 
-// console.log('ay' < 'ah');
-// console.log('h', 'h'.charCodeAt(0));
-// console.log('y', 'y'.charCodeAt(0));
+// console.log('c', 'c'.charCodeAt(0));
+// console.log('d', 'd'.charCodeAt(0));
 
-// console.log('7' > 5);
+// console.log('aaad' > 'aaa');
+
+// console.log('7' > true);
 
 // console.log(null === undefined);
 
@@ -74,4 +75,4 @@
 
 //* Суворе не дорівнює (!==)
 // console.log('4' !== 4);
-// console.log(NaN !== NaN);
+// console.log(NaN != NaN);
