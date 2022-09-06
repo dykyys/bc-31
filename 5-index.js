@@ -5,8 +5,11 @@
 
 //* && - запинається на (false)брехні
 //* Якщо всі операнди були дійсними, повертається останній.
-//* Якщо результат false, зупиняється та повертає вихідне значення цього операнда.
+//* Якщо результат лівого операнда false, зупиняється та повертає вихідне значення цього операнда.
+
 // const result = 4 && 0 && 'Hello!';
+// console.log(result);
+
 // const result2 = 4 && '20';
 // console.log(result2);
 
@@ -18,8 +21,8 @@
 // console.log(result);
 
 // console.log(4 !== 0);
-// const username = prompt('Your name?').trim() || 'Anonymus';
 
+// const username = prompt('Your name?').trim() || 'Anonymus';
 // console.log(username);
 
 //* ! - інвертує правду на брехню, а брехню на правду
@@ -27,7 +30,7 @@
 // console.log(!true);
 
 //? Логічні оператори
-// console.log(true && 3 );
+// console.log(true && 3);
 // console.log(false && 3);
 // console.log(true && 4 && 'kiwi');
 // console.log(true && 0 && 'kiwi');
