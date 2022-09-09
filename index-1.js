@@ -11,22 +11,34 @@ const film = {
   rating: 4,
   actors: ['Aiden', 'Mason', 'Jimmy'],
   isAdult: true,
-  location: {
-    country: 'Jamaica',
-    city: 'Ocho Rios',
-  },
+  // location: {
+  // country: 'Jamaica',
+  // city: 'Ocho Rios',
+  // },
 };
-
-
-
 
 /*
  * Доступ до властивостей(obj.key, obj[key]).
  * Додавання та зміна властивостей
  */
 
-const img = 'preview';
+// const filmTtile = 'title';
 
+// film.title = 'Matrix 2';
+
+// console.log(film.title);
+// console.log(film['title']);
+// console.log(film[filmTtile]);
+
+// film.img = 'https://.....';
+
+// film.location = {
+//   country: 'Jamaica',
+//   city: 'Ocho Rios',
+// };
+// film.location.city = 'Ocho Rios';
+
+// console.log(film);
 
 /*
  *Короткий запис властивостей
@@ -35,18 +47,20 @@ const img = 'preview';
 // const username = 'Oleksii';
 // const email = 'test@gmail.com';
 
-// const signupData = {
+// const userData = {
 //   username,
 //   email,
 // };
 
-// console.log(signupData);
+// console.log(userData);
 
 // const name = prompt("Введіть ваше ім'я");
 // const email = prompt('Ваш email');
 // const phone = prompt('Ваш phone');
 
+// const userData = { name, email, phone };
 
+// console.log(userData);
 
 /*
  * Посилальний тип
@@ -74,11 +88,14 @@ const img = 'preview';
  */
 
 // const arr = [1, 2, 3, 4];
+
+// console.log(arr);
+
 // const obj = {
 //   a: 1,
 //   b: 2,
 // };
-
+// console.log(obj);
 // // const obj = {
 // //   0: 1,
 // //   1: 2,
@@ -86,6 +103,9 @@ const img = 'preview';
 // //   3: 4,
 // //   length: 4,
 // // };
+
+// console.log(typeof arr);
+// console.log(typeof obj);
 
 // console.log(Array.isArray(arr));
 // console.log(Array.isArray(obj));

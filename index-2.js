@@ -29,4 +29,31 @@ const filmDuna = {
     },
   },
   adult: false,
+  changeTitle(newTitle) {
+    this.title = newTitle;
+  },
+  addActor(newActor) {
+    const isInListActors = this.actors.includes(newActor);
+    if (isInListActors) {
+      console.log(`${newActor} already there`);
+      return;
+    }
+    this.actors.push(newActor);
+  },
+  updateRating(newRating) {
+    if (newRating < 9) {
+      return;
+    }
+    this.rating = newRating;
+  },
+  isAdult() {
+    return this.adult;
+  },
 };
+
+filmDuna.changeTitle('Duna 2');
+filmDuna.addActor('Pena');
+filmDuna.updateRating(8.5);
+
+console.log(filmDuna.isAdult());
+console.log(filmDuna);

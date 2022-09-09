@@ -15,18 +15,50 @@ const user = {
   premium: true,
 };
 
+// user.mood = 'happy';
+// user['mood'] = 'happy';
+
+const userMood = 'mood';
+user[userMood] = 'happy';
+
+// user.hobby = 'skydiving';
+// user['hobby'] = 'skydiving';
+const userHobby = 'hobby';
+user[userHobby] = 'skydiving';
+
+// user.premium = !user.premium;
+user['premium'] = !user.premium;
+
+// for (const key of Object.keys(user)) {
+//   console.log(`${key} - ${user[key]}`);
+// }
+
+// console.table(user);
+
 /*
 ? У нас є об'єкт, де зберігаються зарплати нашої команди.
 ? Напишіть метод об'єкта для підсумовування всіх зарплат та збережіть результат у змінній sum.
 ? Повинно вийти 390. Якщо об'єкт salaries порожній, результат має бути 0.
 */
 
-const salaries = {
-  John: 100,
-  Ann: 160,
-  Pete: 130,
-};
-
+// const salaries = {
+//   John: 100,
+//   Ann: 160,
+//   Pete: 130,
+//   calculateSalary() {
+//     let total = 0;
+//     const values = Object.values(this);
+//     for (const value of values) {
+//       if (typeof value !== 'number') {
+//         continue;
+//       }
+//       total += value;
+//     }
+//     return total;
+//   },
+// };
+// const allSalary = salaries.calculateSalary();
+// console.log(allSalary);
 /*
 ? Напишіть ф-цію calcTotalPrice(stones, stoneName), яка приймає масив об'єктів та рядок під назвою каменю.
 ? Ф-ція рахує і повертає загальну вартість каміння з таким ім'ям.
@@ -39,6 +71,16 @@ const stones = [
   { name: 'Щебінь', price: 200, quantity: 2 },
 ];
 
+function calcTotalPrice(stones, stoneName) {
+  for (const stone of stones) {
+    if (stone.name === stoneName) {
+      return stone.price * stone.quantity;
+    }
+  }
+  return 0;
+}
+const price = calcTotalPrice(stones, 'Діамант');
+console.log(price);
 /*
 ? Напиши скрипт управління особистим кабінетом інтернет-банку.
 ? Є об'єкт account, в якому необхідно реалізувати методи для роботи з балансом та історією транзакцій.
