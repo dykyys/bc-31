@@ -4,11 +4,11 @@
 ? замість набору незалежних аргументів.
 */
 
-// function calcBMI(weight,height ) {
+// function calcBMI({ weight = '0', height = '1' } = {}) {
+//   const numericWeight = Number.parseFloat(weight.replace(',', '.'));
+//   const numericHeight = Number.parseFloat(height.replace(',', '.'));
 
-// const numericWeight = Number.parseFloat(weight.replace(',', '.'));
-// const numericHeight = Number.parseFloat(height.replace(',', '.'));
-// return Number((numericWeight / numericHeight ** 2).toFixed(1));
+//   return Number((numericWeight / numericHeight ** 2).toFixed(1));
 // }
 
 // Було
@@ -26,8 +26,8 @@
 // console.log(calcBMI({}));
 // console.log(
 //   calcBMI({
-//     weight: '68,3',
 //     height: '1.65',
+//     weight: '68,3',
 //   })
 // );
 // console.log(
@@ -43,7 +43,10 @@
 ? замість набору незалежних аргументів.
 */
 
-// const printContactsInfo = function (names,phones) {
+// const printContactsInfo = function ({ names = '', phones = '' } = {}) {
+//   if (names === '' || phones === '') {
+//     return 'Параметри передали не вірно!';
+//   }
 
 //   const nameList = names.split(',');
 //   const phoneList = phones.split(',');
@@ -64,14 +67,22 @@
 //   names: 'Jacob,William,Solomon,Artemis',
 //   phones: '89001234567,89001112233,890055566377,890055566300',
 // });
-// printContactsInfo();
+// console.log(printContactsInfo());
 /*
 
 ? Перепиши функцію так, щоб вона приймала один об'єкт параметрів,
 ? замість набору незалежних аргументів.
 */
 
-// function getBotReport(companyName,repairBots , defenceBots) {
+// function getBotReport({
+//   companyName,
+//   bots: { repair: repairBots, defence: defenceBots },
+// }) {
+//   //   const {
+//   //     companyName,
+//   //     bots: { repair: repairBots, defence: defenceBots },
+//   //   } = obj;
+
 //   return `${companyName} has ${repairBots + defenceBots} bots in stock`;
 // }
 
@@ -96,10 +107,13 @@
 ? про кількість товарів на складі будь-якої компанії.
 */
 
-// function getStockReport() {
-
-//   return `${companyName} has ${totalItems} items in stock`;
-// }
+function getStockReport({
+  companyName,
+  stock: { repairBots = 0, defenceBots = 0, shoes = 0, skirts = 0, hats = 0 },
+}) {
+  const totaItems = defenceBots + repairBots + shoes + skirts + hats;
+  return `${companyName} has ${totaItems} items in stock`;
+}
 
 // console.log(
 //   getStockReport({
@@ -132,7 +146,14 @@
 //   return '_' + Math.random().toString(36).substr(2, 9);
 // };
 
-// const createContact = function (partialContact) { };
+// const createContact = function (partialContact) {
+//   return {
+//     list: 'default',
+//     id: generateId(),
+//     createdAt: Date.now(),
+//     ...partialContact,
+//   };
+// };
 
 // console.log(
 //   createContact({
