@@ -80,7 +80,7 @@ function calcTotalPrice(stones, stoneName) {
   return 0;
 }
 const price = calcTotalPrice(stones, 'Діамант');
-console.log(price);
+// console.log(price);
 /*
 ? Напиши скрипт управління особистим кабінетом інтернет-банку.
 ? Є об'єкт account, в якому необхідно реалізувати методи для роботи з балансом та історією транзакцій.
@@ -108,11 +108,23 @@ const account = {
   /*
    * Метод створює та повертає об'єкт транзакції.
    * Приймає суму та тип транзакції.
+   * {type: 'deposit',
+   * amount: 2100,
+   * id:1
+   * }
    */
-  createTransaction(amount, type) {},
+  createTransaction(amount, type) {
+    return {
+      amount,
+      type,
+      id: this.generateId(),
+    };
+  },
 
   // Генерація id для транзакції
-  generateId() {},
+  generateId() {
+    return (this.startId += 1);
+  },
 
   /*
    * Метод, який відповідає за додавання суми до балансу.
@@ -120,7 +132,11 @@ const account = {
    * Викликає createTransaction для створення об'єкта транзакції
    * після чого додає його в історію транзакцій
    */
-  deposit(amount) {},
+  deposit(amount) {
+    this.balance += amount;
+    const transaction = this.createTransaction(amount, Transaction.DEPOSIT);
+    this.transactions.push(transaction);
+  },
 
   /*
    * Метод, який відповідає за зняття суми з балансу.
@@ -131,7 +147,15 @@ const account = {
    * Якщо amount більше ніж поточний баланс, виводь повідомлення
    * про те, що зняття такої суми не можливе, недостатньо коштів.
    */
-  withdraw(amount) {},
+  withdraw(amount) {
+    if (amount > this.balance) {
+      console.log('недостатньо коштів');
+      return;
+    }
+    this.balance -= amount;
+    const transaction = this.createTransaction(amount, Transaction.WITHDRAW);
+    this.transactions.push(transaction);
+  },
 
   /*
    *Метод повертає поточний баланс
@@ -143,11 +167,40 @@ const account = {
   /*
    * Метод шукає та повертає об'єкт транзації по id
    */
-  getTransactionDetails(id) {},
+  getTransactionDetails(id) {
+    for (const transaction of this.transactions) {
+      if (transaction.id === id) {
+        return transaction;
+      }
+    }
+    return ` Операції з id ${id} не знайдено`;
+  },
 
   /*
    * Метод повертає кількість коштів
    * певного типу транзакції з усієї історії транзакцій
    */
-  getTransactionTotal(typeOperation) {},
+  getTransactionTotal(typeOperation) {
+    let total = 0;
+    for (const { amount, type } of this.transactions) {
+      if (type !== typeOperation) {
+        continue;
+      }
+      total += amount;
+    }
+    return total;
+  },
+  getAllTransactions() {
+    return this.transactions;
+  },
 };
+
+account.deposit(2100);
+account.deposit(2100);
+account.deposit(2100);
+account.withdraw(1300);
+
+console.log(account.getBalance());
+console.table(account.getAllTransactions());
+console.log(account.getTransactionDetails(5));
+console.table(account.getTransactionTotal(Transaction.DEPOSIT));
