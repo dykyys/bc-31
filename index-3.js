@@ -62,3 +62,22 @@
 //   }
 // });
 // console.log(newNumbers);
+
+// const makeDish = function (shef, dish) {
+//   console.log(`${shef} is cooking ${dish}`);
+// };
+
+// makeDish('Mango', 'tea');
+// makeDish('Polly', 'coffee');
+
+const makeShef = function (shefName) {
+  return function (dish) {
+    console.log(`${shefName} is cooking ${dish}`);
+  };
+};
+
+const mangoShef = makeShef('Mango');
+const pollyShef = makeShef('Polly');
+
+mangoShef('tea');
+pollyShef('coffee');
