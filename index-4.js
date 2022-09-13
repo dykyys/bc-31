@@ -196,90 +196,114 @@ function getStockReport({
 //   })
 // );
 
-// const people = [
-//   {
-//     name: 'Alex',
-//     know: ['Alex', 'Jhon'],
-//   },
-//   {
-//     name: 'Eva',
-//     know: ['Alex', 'Jhon'],
-//   },
-//   {
-//     name: 'Ivan',
-//     know: ['Jhon', 'Eva'],
-//   },
-//   {
-//     name: 'Jhon',
-//     know: [],
-//   },
-// ];
+const people = [
+  {
+    name: 'Alex',
+    know: ['Alex', 'Jhon'],
+  },
+  {
+    name: 'Eva',
+    know: ['Alex', 'Jhon'],
+  },
+  {
+    name: 'Ivan',
+    know: ['Jhon', 'Eva'],
+  },
+  {
+    name: 'Jhon',
+    know: [],
+  },
+];
 //нарцис  'Jhon'
 
-// const people2 = [
-//   {
-//     name: 'Alex',
-//     know: ['Alex', 'Jhon'],
-//   },
-//   {
-//     name: 'Jhon',
-//     know: [],
-//   },
-//   {
-//     name: 'Eva',
-//     know: [],
-//   },
-//   {
-//     name: 'Ivan',
-//     know: ['Jhon', 'Eva'],
-//   },
-// ];
+const people2 = [
+  {
+    name: 'Alex',
+    know: ['Alex', 'Jhon'],
+  },
+  {
+    name: 'Jhon',
+    know: [],
+  },
+  {
+    name: 'Eva',
+    know: [],
+  },
+  {
+    name: 'Ivan',
+    know: ['Jhon', 'Eva'],
+  },
+];
 //немає нарциса'
 
-// const people3 = [
-//   {
-//     name: 'Alex',
-//     know: ['Alex', 'Eva'],
-//   },
-//   {
-//     name: 'Jhon',
-//     know: [],
-//   },
-//   {
-//     name: 'Eva',
-//     know: ['Alex', 'Jhon'],
-//   },
-//   {
-//     name: 'Ivan',
-//     know: ['Jhon', 'Eva'],
-//   },
-// ];
+const people3 = [
+  {
+    name: 'Alex',
+    know: ['Alex', 'Eva'],
+  },
+  {
+    name: 'Jhon',
+    know: [],
+  },
+  {
+    name: 'Eva',
+    know: ['Alex', 'Jhon'],
+  },
+  {
+    name: 'Ivan',
+    know: ['Jhon', 'Eva'],
+  },
+];
 //немає нарциса
 
-// const people4 = [
-//   {
-//     name: 'Alex',
-//     know: ['Alex', 'Jhon'],
-//   },
-//   {
-//     name: 'Jhon',
-//     know: ['Eva'],
-//   },
-//   {
-//     name: 'Eva',
-//     know: ['Alex', 'Jhon'],
-//   },
-//   {
-//     name: 'Ivan',
-//     know: ['Jhon', 'Eva'],
-//   },
-// ];
+const people4 = [
+  {
+    name: 'Alex',
+    know: ['Alex', 'Jhon'],
+  },
+  {
+    name: 'Jhon',
+    know: ['Eva'],
+  },
+  {
+    name: 'Eva',
+    know: ['Alex', 'Jhon'],
+  },
+  {
+    name: 'Ivan',
+    know: ['Jhon', 'Eva'],
+  },
+];
 //немає нарциса'
 
 // //Нарциса знають всі, нарцис незнає нікого
 
-// function findNar(peoples) { }
-// findNar(people);
+function findNar(peoples) {
+  let narName = '';
+
+  for (const { name, know } of peoples) {
+    if (know.length === 0) {
+      narName = name;
+      break;
+    }
+  }
+
+  if (narName === '') {
+    return 'немає нарциса';
+  }
+
+  for (const { know, name } of peoples) {
+    if (narName === name) {
+      continue;
+    }
+    if (!know.includes(narName)) {
+      return 'немає нарциса';
+    }
+  }
+
+  return `${narName} нарцис`;
+}
+console.log(findNar(people4));
 // findNar(people2);
 // findNar(people3);
 // findNar(people4);
