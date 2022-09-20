@@ -86,7 +86,7 @@ ul {
   transform: translateY(-100%);
 }
 
-.panel.open > :first-child {
+.panel.is-open > :first-child {
   transform: translateY(0);
 }
 
@@ -94,7 +94,7 @@ ul {
   transform: translateY(100%);
 }
 
-.panel.open > :last-child {
+.panel.is-open > :last-child {
   transform: translateY(0);
 }
 
@@ -102,7 +102,7 @@ ul {
   font-size: 4em;
 }
 
-.panel.open {
+.panel.is-open {
   font-size: 40px;
-  flex: 5;
+  flex-grow: 5;
 }
