@@ -17,7 +17,7 @@
 80D:\code\GoIT\js\bc-31\node_modules\date-fns\esm\locale\ar-DZ\_lib\formatDistance133087267873470234 1
 68D:\code\GoIT\js\bc-31\node_modules\date-fns\esm\locale\bs\index.d.ts121436361000000000 0
 58D:\code\GoIT\js\bc-31\node_modules\csso\lib\clean\index.js121436361000000000 0
-37D:\code\GoIT\js\bc-31\src\js\timer.js133087463318469820 0
+37D:\code\GoIT\js\bc-31\src\js\timer.js133087475769769785 0
 52D:\code\GoIT\js\bc-31\node_modules\nan\tools\1to2.js121436361000000000 0
 74D:\code\GoIT\js\bc-31\node_modules\date-fns\fp\formatDuration\package.json121436361000000000 0
 58D:\code\GoIT\js\bc-31\node_modules\sass\types\compile.d.ts121436361000000000 0
@@ -77,7 +77,7 @@
 81D:\code\GoIT\js\bc-31\node_modules\date-fns\fp\areIntervalsOverlapping\index.d.ts121436361000000000 0
 55D:\code\GoIT\js\bc-31\node_modules\terser\lib\output.js121436361000000000 0
 98D:\code\GoIT\js\bc-31\node_modules\parcel-reporter-clean-dist\test\fixtures\packageV2\package.json121436361000000000 0
-26D:\code\GoIT\js\bc-31\dist133087463319931766 1
+26D:\code\GoIT\js\bc-31\dist133087476039099894 1
 71D:\code\GoIT\js\bc-31\node_modules\date-fns\esm\locale\kk\index.js.flow121436361000000000 0
 68D:\code\GoIT\js\bc-31\node_modules\date-fns\esm\fp\parseISO\index.js121436361000000000 0
 74D:\code\GoIT\js\bc-31\node_modules\date-fns\esm\locale\en-IE\index.js.flow121436361000000000 0
@@ -220,8 +220,8 @@
 88D:\code\GoIT\js\bc-31\node_modules\caniuse-lite\data\features\font-variant-alternates.js121436361000000000 0
 82D:\code\GoIT\js\bc-31\node_modules\date-fns\esm\fp\endOfWeekWithOptions\index.d.ts121436361000000000 0
 64D:\code\GoIT\js\bc-31\node_modules\date-fns\esm\fp\isSameISOWeek133087267882466783 1
-48D:\code\GoIT\js\bc-31\dist\timer.fdc40421.js.map133087463319903449 0
-36D:\code\GoIT\js\bc-31\src\timer.html133087431767337537 0
+48D:\code\GoIT\js\bc-31\dist\timer.fdc40421.js.map133087475771077576 0
+36D:\code\GoIT\js\bc-31\src\timer.html133087476037846317 0
 48D:\code\GoIT\js\bc-31\node_modules\nan\README.md121436361000000000 0
 59D:\code\GoIT\js\bc-31\node_modules\escalade\sync\index.d.ts121436361000000000 0
 49D:\code\GoIT\js\bc-31\node_modules\lmdb\README.md121436361000000000 0
@@ -2477,7 +2477,7 @@
 84D:\code\GoIT\js\bc-31\node_modules\date-fns\esm\differenceInCalendarYears\index.d.ts121436361000000000 0
 58D:\code\GoIT\js\bc-31\node_modules\queue-microtask\LICENSE121436361000000000 0
 80D:\code\GoIT\js\bc-31\node_modules\fast-glob\out\providers\transformers\entry.js121436361000000000 0
-37D:\code\GoIT\js\bc-31\dist\timer.html133087454169399860 0
+37D:\code\GoIT\js\bc-31\dist\timer.html133087476039079893 0
 76D:\code\GoIT\js\bc-31\node_modules\date-fns\locale\pt-BR\_lib\formatRelative133087267879395723 1
 76D:\code\GoIT\js\bc-31\node_modules\date-fns\esm\fp\startOfYear\index.js.flow121436361000000000 0
 75D:\code\GoIT\js\bc-31\node_modules\dom-serializer\lib\esm\foreignNames.d.ts121436361000000000 0
@@ -12592,7 +12592,7 @@
 44D:\code\GoIT\js\bc-31\dist\logo.c493797d.png133087454168764384 0
 61D:\code\GoIT\js\bc-31\dist\material-icons-sharp.95cc19a8.woff133087454169461498 0
 65D:\code\GoIT\js\bc-31\dist\material-icons-two-tone.74eabdce.woff2133087454169888309 0
-44D:\code\GoIT\js\bc-31\dist\timer.fdc40421.js133087463319880443 0
+44D:\code\GoIT\js\bc-31\dist\timer.fdc40421.js133087475771077576 0
 54D:\code\GoIT\js\bc-31\assets\actions-config-step-2.png133086457468636829 0
 45D:\code\GoIT\js\bc-31\assets\how-it-works.png133086457468636829 0
 46D:\code\GoIT\js\bc-31\assets\repo-settings.png133086457468636829 0

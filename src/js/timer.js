@@ -1,5 +1,5 @@
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
-const TIMER_DEADLINE = new Date(2022, 8, 29, 13, 59);
+const TIMER_DEADLINE = new Date(2022, 9, 29, 18, 59);
 
 class Timer {
   #intervalId = null;
