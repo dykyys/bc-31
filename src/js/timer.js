@@ -1,5 +1,5 @@
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
-const TIMER_DEADLINE = new Date(2022, 9, 29, 18, 59);
+const TIMER_DEADLINE = new Date(2022, 8, 29, 12, 12);
 
 class Timer {
   #intervalId = null;
@@ -36,6 +36,13 @@ class Timer {
 
     this.#intervalId = setInterval(() => {
       const diff = this.#deadLine.getTime() - Date.now();
+
+      if (diff <= 1000) {
+        clearInterval(this.#intervalId);
+        Notify.success('Yes!', {
+          position: 'center-center',
+        });
+      }
       const data = this.#convertMs(diff);
 
       // for (const key in data) {
