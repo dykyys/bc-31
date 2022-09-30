@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page title</title>
+    <link rel="stylesheet" href="./sass/index.scss" />
+    <!-- <script type="module" src="./js/getGeoposition.js"></script> -->
+    <script type="module" src="./js/weather/index.js"></script>
+  </head>
+  <body>
+    <section class="weather">
+      <a class="nav__link" href="./index.html">back</a>
+      <div class="container">
+        <form class="search-form js-search-form">
+          <input
+            class="search-input js-search-input"
+            type="text"
+            name="user_country"
+          />
+          <button class="search-btn" type="submit">
+            Пошук <span class="material-icons">search</span>
+          </button>
+        </form>
+        <div class="weather__wrapper"></div>
+      </div>
+    </section>
+  </body>
+</html>
+<!-- {
+"coord": {
+"lon": 30.625,
+"lat": 50.5348
+},
+"weather": [
+{
+"id": 803,
+"main": "Clouds",
+"description": "broken clouds",
+"icon": "04d"
+}
+],
+"base": "stations",
+"main": {
+"temp": 18.41,
+"feels_like": 18.58,
+"temp_min": 18.35,
+"temp_max": 18.41,
+"pressure": 1012,
+"humidity": 87,
+"sea_level": 1012,
+"grnd_level": 1001
+},
+"visibility": 10000,
+"wind": {
+"speed": 1.18,
+"deg": 320,
+"gust": 1.37
+},
+"clouds": {
+"all": 57
+},
+"dt": 1664527983,
+"sys": {
+"type": 2,
+"id": 2003742,
+"country": "UA",
+"sunrise": 1664510137,
+"sunset": 1664552364
+},
+"timezone": 10800,
+"id": 700072,
+"name": "Mykilska Slobidka",
+"cod": 200
+} -->
