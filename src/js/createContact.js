@@ -1,9 +1,7 @@
-import { formatDistance } from 'date-fns';
+import { formatDateCreate } from './helpers/formatDateCreate';
 
-export function createListContacts(contacts) {
-  return contacts
-    .map(({ name, phone, email, id, createdAt }) => {
-      return /*HTML*/ `<div data-id="${id}" class="col-md-6 js-contact-card">
+export function createContact({ name, phone, email, id, createdAt }) {
+  return /*HTML*/ `<div data-id="${id}" class="col-md-6 js-contact-card">
       <div class="card mb-2 shadow">
         <div class="d-flex justify-content-between pb-3 border-bottom">
           <div class="d-flex flex-row align-items-center gap-1">
@@ -40,12 +38,4 @@ export function createListContacts(contacts) {
         </div>
       </div>
     </div>`;
-    })
-    .join('');
-}
-
-function formatDateCreate(data) {
-  return formatDistance(new Date(), new Date(data), {
-    addSuffix: true,
-  });
 }

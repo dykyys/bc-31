@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./sass/index.scss" />
     <script type="module" src="./index.js"></script>
     <script type="module" src="./js/form.js"></script>
+    <!-- <script type="module" src="./js/spinner.js"></script> -->
   </head>
   <body style="background: linear-gradient(to right, #b2bfc2, #e6e7db)">
     <!-- Так добавляются фрагменты в главные HTML-файлы страниц. -->
@@ -23,5 +24,8 @@
       <include src="./partials/card.html"></include>
     </section>
     <include src="./partials/form.html"></include>
+    <div class="backdrop is-hidden" data-load>
+      <div class="js-spinner"></div>
+    </div>
   </body>
 </html>
