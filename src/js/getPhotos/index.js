@@ -25,7 +25,7 @@ const handleSubmit = event => {
 
   unsplashAPI
     .getPhotos()
-    .then(({ results, total }) => {
+    .then(({ data: { results, total } }) => {
       if (results.length === 0) {
         onError(`We don\`t find photos by ${searchQuery}`);
         return;
@@ -54,7 +54,7 @@ const handleClick = () => {
 
   unsplashAPI
     .getPhotos()
-    .then(({ results }) => {
+    .then(({ data: { results } }) => {
       addMarkup(results);
     })
     .catch(error => {

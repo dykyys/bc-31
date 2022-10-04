@@ -1,13 +1,17 @@
+import axios from 'axios';
+axios.defaults.baseURL = 'https://api.unsplash.com/search';
+axios.defaults.headers.common['Authorization'] =
+  'Client-ID LxvKVGJqiSe6NcEVZOaLXC-f2JIIWZaq_o0WrF8mwJc';
+
 export class UnsplashAPI {
-  static BASE__URL = 'https://api.unsplash.com/search';
   #query = '';
   #page = 1;
   #totalPages = 0;
   #perPage;
   #searchParams = new URLSearchParams({
-    client_id: 'LxvKVGJqiSe6NcEVZOaLXC-f2JIIWZaq_o0WrF8mwJc',
     color: 'purple',
     orientation: 'portrait',
+    per_page: 12,
   });
 
   constructor({ perPage = 12 } = {}) {
@@ -15,16 +19,8 @@ export class UnsplashAPI {
   }
 
   getPhotos() {
-    const url = `${UnsplashAPI.BASE__URL}/photos?page=${this.#page}&query=${
-      this.#query
-    }&${this.#searchParams}&per_page=${this.#perPage}`;
-
-    return fetch(url).then(response => {
-      if (!response.ok) {
-        throw new Error(response.status);
-      }
-      return response.json();
-    });
+    const url = `/photos?page=${this.#page}&query=${this.#query}`;
+    return axios.get(url, { params: this.#searchParams });
   }
 
   get query() {

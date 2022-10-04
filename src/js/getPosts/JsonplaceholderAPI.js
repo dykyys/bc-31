@@ -11,6 +11,7 @@ export class JsonplaceholderAPI {
     const url = `${this.#BASE_URL}posts?_page=${this.#page}&_limit=${
       this.#limit
     }`;
+
     return fetch(url).then(response => {
       if (!response.ok) {
         throw new Error('shit happens');
