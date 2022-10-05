@@ -4,15 +4,15 @@ import localStorApi from './localestorage';
 import { loading, stopLoading } from './spinner';
 import { refs } from './refs';
 import { createContact } from './service/contact.service';
+import { createContactMarkup } from './createContactMarkup';
 
 const LOCAL_STORAGE_KEY = 'user-data';
 initForm();
 const toggleHiddenModal = () => {
-  console.log('open');
   refs.backdrop.classList.toggle('is-hidden');
 };
 
-const handleSubmit = event => {
+const handleSubmit = async event => {
   event.preventDefault();
   const { name, email, phone } = event.target.elements;
 
@@ -29,17 +29,21 @@ const handleSubmit = event => {
     userData[name] = value;
   });
   loading();
-  createContact(userData)
-    .then(data => {
-      Notify.success(`${data.name} created!`);
-      stopLoading();
-    })
-    .catch(error => {
-      Notify.failure(`${error.message}. Shit happens!`);
-      stopLoading();
-    });
+
+  try {
+    const data = await createContact(userData);
+    Notify.success(`${data.name} created!`);
+    console.log(data);
+    const markup = createContactMarkup(data);
+    refs.list.insertAdjacentHTML('afterbegin', markup);
+  } catch (error) {
+    Notify.failure(`${error.message}. Shit happens!`);
+  } finally {
+    stopLoading();
+  }
+
   toggleHiddenModal();
-  event.currentTarget.reset();
+  event.target.reset();
   localStorApi.remove(LOCAL_STORAGE_KEY);
 };
 

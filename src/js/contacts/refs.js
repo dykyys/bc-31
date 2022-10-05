@@ -7,4 +7,7 @@ export const refs = {
   updateBtn: document.querySelector('.js-update'),
   loadBackdrop: document.querySelector('[data-load]'),
   spinner: document.querySelector('.js-spinner'),
+  infoBackdrop: document.querySelector('[data-info]'),
+  closeInfo: document.querySelector('.close-info-btn'),
+  infoBox: document.querySelector('.info__box'),
 };

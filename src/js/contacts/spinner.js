@@ -25,7 +25,7 @@ var opts = {
 export const spinner = new Spinner(opts);
 
 export function loading() {
-  spinner.spin(refs.spinner);
+  spinner.spin(refs.loadBackdrop);
   refs.loadBackdrop.classList.remove('is-hidden');
 }
 
